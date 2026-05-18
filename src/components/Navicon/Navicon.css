@@ -1,0 +1,9 @@
+.navbar-icons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-icons a {
+    display: flex;
+    padding: 0 .5rem;
+}

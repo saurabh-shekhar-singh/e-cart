@@ -1,0 +1,16 @@
+.navbar-hamburger {
+  position: absolute;
+  right: 1rem;
+  top: 1.5rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+}
+
+.hamburger-line {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+}

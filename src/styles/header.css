@@ -1,0 +1,27 @@
+header {
+  background-color: #2c3234;
+  color: #fff;
+  padding: 0 2.5rem;
+  line-height: 4rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .navbar-hamburger {
+    display: flex;
+  }
+
+  .navbar-list {
+    display: none;
+  }
+}

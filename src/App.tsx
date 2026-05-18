@@ -1,11 +1,15 @@
-import './App.css'
+import "./App.css";
+import Footer from "./layouts/footer/Footer";
+import Header from "./layouts/header/Header";
 
 function App() {
   return (
     <>
-      <h1>Equal Expert</h1>
+      <Header />
+      {/* <Content /> */}
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
