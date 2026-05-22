@@ -15,6 +15,16 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 0;
+  max-height: 100px;
+  opacity: 1;
+  transition:
+    max-height 0.3s ease-out,
+    opacity 0.3s ease-out;
+  overflow: hidden;
+}
+
+.navbar:not(.open) {
+  max-height: 100px;
 }
 
 .company-info {
@@ -25,12 +35,26 @@ header {
   height: 50px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .navbar-hamburger {
     display: flex;
   }
 
-  .navbar-list {
+  .navbar-list,
+  .navbar-icons {
     display: none;
   }
+}
+
+.open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  max-height: 500px;
+}
+
+.open .navbar-icons {
+  display: flex;
+  flex-direction: row;
 }

@@ -3,7 +3,7 @@ import "./Navicon.css";
 import { AppContext } from "@/context/AppContext";
 import { useContext } from "react";
 
-function Navicon() {
+function Navicon({ isNavOpen }: { isNavOpen: boolean }) {
   const { cart } = useContext(AppContext);
   const cartItemCount = cart.reduce((total, item) => total + item?.quantity, 0);
   // const [cartItemCount, setCartItemCount] = useState(0);
@@ -13,9 +13,11 @@ function Navicon() {
   // }, [cart]);
 
   return (
-    <div className="navbar-icons">
+    <div className={`navbar-icons ${isNavOpen ? "open" : ""}`}>
       <Link to="/cart">
-        {cartItemCount > 0 && <span className="cart-item-count">{cartItemCount}</span>}
+        {cartItemCount > 0 && (
+          <span className="cart-item-count">{cartItemCount}</span>
+        )}
         <img
           src="../../public/cart-32.png"
           alt="Shopping Cart"

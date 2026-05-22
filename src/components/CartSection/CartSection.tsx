@@ -2,6 +2,7 @@ import { useContext } from "react";
 import "./CartSection.css";
 import CartSummary from "./CartSummary";
 import { AppContext } from "@/context/AppContext";
+import data from "@/assets/en.json";
 
 function CartSection() {
   const { cart, setCart } = useContext(AppContext);
@@ -54,8 +55,9 @@ function CartSection() {
                         setCart(cart.filter((i) => i.id !== item.id))
                       }
                     >
-                      Remove
+                      {data.actions.remove}
                     </button>
+                    <img className="remove-icon" src="../../public/delete-30.png" alt="Remove" />
                   </div>
                 </div>
                 <div className="price">

@@ -14,3 +14,16 @@
   width: 100%;
   background-color: #fff;
 }
+
+.open .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+  transition: all 0.3s ease;
+}
+.open .hamburger-line:nth-child(2) {
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.open .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  transition: all 0.3s ease;
+}

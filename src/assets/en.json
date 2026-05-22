@@ -30,10 +30,9 @@
       "logisticsValue": "Complementry",
       "estimatedTax": "Estimated Tax",
       "estimatedTaxValue": "Calculated at checkout",
-      "total": "Total"
-    },
-
-    "note": "Secure 256‑bit quantum encryption applied to all transactions."
+      "total": "Total",
+      "note": "Secure 256‑bit encryption applied to all transactions."
+    }
   },
   "actions": {
     "addToCart": "Add to Cart",

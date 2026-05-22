@@ -1,13 +1,23 @@
-import { createContext, useState } from "react";
+import { Cart } from "@/types/app";
+import {
+  createContext,
+  useState,
+  Dispatch,
+  SetStateAction,
+  ReactNode,
+} from "react";
 // import { cartReducer } from "./Reducers";
 
-const AppContext = createContext({
+const AppContext = createContext<{
+  cart: Cart[];
+  setCart: Dispatch<SetStateAction<Cart[]>>;
+}>({
   cart: [],
-  setCart: (c) => {},
+  setCart: () => undefined,
 });
 
-const AppProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
+const AppProvider = ({ children }: { children: ReactNode }) => {
+  const [cart, setCart] = useState<Cart[]>([]);
   //   const [state, dispatch] = useReducer(cartReducer, {
   //     products: [],
   //     cart: [],
