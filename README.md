@@ -70,7 +70,6 @@ Please note, during the technical interview, which will build upon this exercise
 
 Good luck…
 
-
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -90,9 +89,9 @@ If you are developing a production application, we recommend updating the config
 
 ```js
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(["dist"]),
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ["**/*.{ts,tsx}"],
     extends: [
       // Other configs...
 
@@ -107,40 +106,183 @@ export default defineConfig([
     ],
     languageOptions: {
       parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
         tsconfigRootDir: import.meta.dirname,
       },
       // other options...
     },
   },
-])
+]);
 ```
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
 ```js
 // eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+import reactX from "eslint-plugin-react-x";
+import reactDom from "eslint-plugin-react-dom";
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(["dist"]),
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ["**/*.{ts,tsx}"],
     extends: [
       // Other configs...
       // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
+      reactX.configs["recommended-typescript"],
       // Enable lint rules for React DOM
       reactDom.configs.recommended,
     ],
     languageOptions: {
       parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
         tsconfigRootDir: import.meta.dirname,
       },
       // other options...
     },
   },
-])
+]);
 ```
+
+# EquiMart Frontend
+
+A responsive e‑commerce UI and theme implementation inspired by modern design systems.  
+This repository contains the product listing, cart, theme assets, and notes about AI tool usage, testing goals, and development workflow.
+
+---
+
+## 📑 Table of Contents
+
+- [Project Overview](#project-overview)
+- [AI Tool Usage](#ai-tool-usage)
+- [Backlog](#backlog)
+- [Environment](#environment)
+- [Testing and QA](#testing-and-qa)
+- [Development Workflow](#development-workflow)
+- [Contribution Guidelines](#contribution-guidelines)
+- [Notes](#notes)
+- [Contact](#contact)
+- [License](#license)
+
+---
+
+## 📌 Project Overview
+
+EquiMart frontend implements a clean, responsive product listing and cart UI with a centralized theme.  
+The codebase includes components, styles, and test scaffolding intended to be extended into a production storefront.
+
+---
+
+## 🤖 AI Tool Usage
+
+- **Design generation**: Google Stitch used to generate initial design concepts and layout mockups.
+- **Assets and dummy data**: Copilot, ChatGPT, and Nano Banana used to create icons, product dummy data, and copy variants.
+- **Code assistance and QA**:
+  - AI Copilot used to find configuration issues in running test cases and to surface flaky tests.
+  - Copilot used for in‑line code completions, boilerplate code generation, type detection, auto imports, auto‑corrections, and generating boilerplate code in test files.
+- **Theme extraction**: Microsoft Copilot used to extract the color theme and style tokens from the Equal Experts website for parity with the reference design.
+
+> When AI tools are used to generate code or assets, document the tool and the generated output in the related PR.
+
+---
+
+## 📋 Backlog
+
+- Unit test coverage > 80% — increase coverage for components, utilities, and cart logic.
+- Star rating on product card — add UI and accessibility for product ratings.
+- Stock validation on Add to Cart action — prevent adding more items than available and surface errors to users.
+- Remove from cart from product page — allow removing items directly from product detail pages.
+
+---
+
+## 🔐 Environment
+
+- Store secrets and API keys in `.env.local`.
+- Do not commit secrets to the repository.
+
+---
+
+## 🧪 Testing and QA
+
+**Unit tests**
+
+- Use Jest + React Testing Library for component and logic tests.
+- Target: > 80% coverage. Prioritize cart logic, pricing calculations, and stock validation.
+
+**End‑to‑end**
+
+- Use Playwright or Cypress for critical flows: add to cart, remove from cart, checkout summary.
+
+**CI**
+
+- Run lint, unit tests, and coverage checks on every pull request.
+
+**AI assisted QA**
+
+- Use AI Copilot to scan test runs and highlight configuration issues or flaky tests.
+
+---
+
+## 🔄 Development Workflow
+
+**Branching**
+
+- Feature branches: `feature/<short-description>`
+- Bugfix branches: `fix/<short-description>`
+
+**Commits**
+
+- Use clear, imperative commit messages.
+
+**Pull Requests**
+
+- Include a short description, screenshots if UI changed, and link to related backlog items.
+- Ensure tests pass and coverage checks meet thresholds.
+
+**Code style**
+
+- Follow project ESLint and Prettier rules.
+- Run `npm run lint` before opening a PR.
+
+**AI usage policy**
+
+- When using AI tools for code generation, include a short note in the PR describing which tool was used and what was generated.
+
+---
+
+## 🤝 Contribution Guidelines
+
+- At least one approving review required before merging.
+- Keep changes focused and small; split large features into multiple PRs.
+- Add or update tests for new behavior.
+- Document any public API or component contract changes in the README or component docs.
+
+---
+
+## 📝 Notes
+
+**Privacy and security**
+
+- Do not commit secrets or private keys. Use environment variables and secure storage.
+
+**Design parity**
+
+- Color tokens and typography were derived from the reference site using Microsoft Copilot; keep tokens centralized in `theme.css`.
+
+---
+
+## 📬 Contact
+
+For questions about AI tool usage or test coverage strategy, contact the frontend lead.
+
+---
+
+## 📄 License
+
+Specify your project license here (for example, MIT).  
+Add a `LICENSE` file to the repository root.
+
+---
+
+> Generated README.md content reflects the project scope, AI tool usage, backlog items, and recommended development practices.  
+> Update sections as the project evolves.
