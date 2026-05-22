@@ -192,6 +192,7 @@ The codebase includes components, styles, and test scaffolding intended to be ex
 - Star rating on product card — add UI and accessibility for product ratings.
 - Stock validation on Add to Cart action — prevent adding more items than available and surface errors to users.
 - Remove from cart from product page — allow removing items directly from product detail pages.
+- Fix known bug - Verticle nav not auto-closing on select and sreen resolutino change.
 
 ---
 
