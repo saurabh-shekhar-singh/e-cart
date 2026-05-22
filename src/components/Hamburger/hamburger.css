@@ -1,7 +1,7 @@
 .navbar-hamburger {
   position: absolute;
   right: 1rem;
-  top: 1.5rem;
+  top: 1.85rem;
   display: none;
   flex-direction: column;
   justify-content: space-between;

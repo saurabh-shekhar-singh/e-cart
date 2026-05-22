@@ -1,0 +1,44 @@
+{
+  "title": "EquiMart",
+  "subtitle": "",
+  "description": "",
+  "navigation": [
+    {
+      "name": "Collections",
+      "link": "/"
+    },
+    {
+      "name": "New arrivals",
+      "link": "/arrivals"
+    },
+    {
+      "name": "Archives",
+      "link": "/archives"
+    },
+    {
+      "name": "Support",
+      "link": "/support"
+    }
+  ],
+  "cart": {
+    "subtitle": "",
+    "description": "",
+    "summary": {
+      "title": "Summary",
+      "subtotal": "Subtotal",
+      "logistics": "Standard Logistics",
+      "logisticsValue": "Complementry",
+      "estimatedTax": "Estimated Tax",
+      "estimatedTaxValue": "Calculated at checkout",
+      "total": "Total"
+    },
+
+    "note": "Secure 256‑bit quantum encryption applied to all transactions."
+  },
+  "actions": {
+    "addToCart": "Add to Cart",
+    "addedToCart": "Added to Cart",
+    "remove": "Remove",
+    "proceedToCheckout": "Proceed to Checkout →"
+  }
+}

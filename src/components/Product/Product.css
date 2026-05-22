@@ -1,0 +1,112 @@
+.content-item {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  /* height: 440px; */
+  border: 1px solid #9d9e9f33;
+  border-radius: 8px;
+  /* overflow: hidden; */
+}
+
+/* .content-item {
+  row-gap: 4rem;
+  column-gap: 0.4rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-flow: dense;
+} */
+
+.content-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-wrapper {
+  width: 60%;
+}
+
+.product-image {
+  display: block;
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  height: 100%;
+  /* width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block; */
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+.product-details-container {
+  padding: 12px 20px;
+}
+
+/* .product-details-container p {
+  font-size: 0.7rem;
+  height: 98px;
+  text-overflow: ellipsis;
+} */
+
+.product-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-details .product-name {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.product-details .product-price {
+  color: #1795d4;
+}
+
+.action-item {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+}
+
+.add-to-cart-button {
+  background-color: #1795d4;
+  border: 2px solid #1795d4;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.added-to-cart-button {
+  display: flex;
+  justify-content: center;
+  border: 2px solid #1795d4;
+  /* background-color: transparent; */
+  padding: 8px 16px;
+  border-radius: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.added-to-cart-button img {
+  height: 16px;
+}
+.added-to-cart-button p {
+  line-height: 16px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0 0 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  line-height: 1.1rem;
+  max-height: calc(1.1rem * 2); 
+}

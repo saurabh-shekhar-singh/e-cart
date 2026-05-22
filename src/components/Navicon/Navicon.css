@@ -1,9 +1,16 @@
 .navbar-icons {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
 }
 
 .navbar-icons a {
-    display: flex;
-    padding: 0 .5rem;
+  display: flex;
+  padding: 0 0.5rem;
+}
+
+.cart-item-count {
+  line-height: normal;
+  color: #fff;
+  text-decoration: none;
 }

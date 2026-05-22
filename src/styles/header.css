@@ -7,8 +7,8 @@ header {
 
 .title {
   font-size: 1.5rem;
-  margin-left: 0.5rem;
   cursor: pointer;
+  margin-left: 0.5rem;
 }
 
 .navbar {
@@ -17,7 +17,15 @@ header {
   padding: 0.5rem 0;
 }
 
-@media (max-width: 600px) {
+.company-info {
+  display: flex;
+  align-items: center;
+}
+.company-info img {
+  height: 50px;
+}
+
+@media (max-width: 700px) {
   .navbar-hamburger {
     display: flex;
   }

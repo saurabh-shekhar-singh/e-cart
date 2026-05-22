@@ -1,12 +1,13 @@
 import Product from "@/components/Product/Product";
 import "@styles/content.css";
+import data from "@/assets/en.json";
 
 function Content() {
   return (
     <main>
       <section>
         <div className="main-info">
-          <h1>Neural Tech</h1>
+          <h1>{data.subtitle}</h1>
           <p>
             Experience high-precision clarity and ethereal efficiency. Our
             advanced hardware seamlessly integrates with your neural pathways

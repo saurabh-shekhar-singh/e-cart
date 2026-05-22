@@ -5,16 +5,16 @@
   padding: 0;
 }
 
-.navbar-list li {
+.link-item {
   list-style: none;
 }
 
-.navbar-list li a {
+.nav-link {
   color: #fff;
   text-decoration: none;
 }
 
-.navbar-list li a:hover {
+.nav-link:hover {
   color: #1795d4;
   transition: color 0.3s;
 }

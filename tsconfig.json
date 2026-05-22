@@ -21,6 +21,7 @@
       "@contexts/*": ["src/contexts/*"],
       "@pages/*": ["src/pages/*"]
     },
+    "resolveJsonModule": true,
     "moduleResolution": "node",
     "jsx": "react-jsx",
     "types": ["@testing-library/jest-dom"]
