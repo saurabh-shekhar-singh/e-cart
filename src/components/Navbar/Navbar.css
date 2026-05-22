@@ -1,3 +1,4 @@
+@import "../../styles/theme.css";
 .navbar-list {
   display: flex;
   gap: 1.5rem;
@@ -16,6 +17,10 @@
 }
 
 .nav-link:hover {
-  color: #1795d4;
+  color: var(--ee-btn-bg-primary);
   transition: color 0.3s;
+}
+
+.navbar-list .active span {
+  border-bottom: 2.5px solid var(--ee-btn-bg-primary);
 }

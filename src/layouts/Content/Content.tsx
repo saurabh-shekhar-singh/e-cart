@@ -1,18 +1,14 @@
 import Product from "@/components/Product/Product";
 import "@styles/content.css";
-import data from "@/assets/en.json";
+import t from "@/assets/en.json";
 
 function Content() {
   return (
     <main>
       <section>
         <div className="main-info">
-          <h1>{data.subtitle}</h1>
-          <p>
-            Experience high-precision clarity and ethereal efficiency. Our
-            advanced hardware seamlessly integrates with your neural pathways
-            for effortless control.
-          </p>
+          <h1>{t.subtitle}</h1>
+          <p>{t.description}</p>
         </div>
       </section>
       <section className="main-content">
