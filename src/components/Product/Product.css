@@ -96,3 +96,54 @@
   line-height: 1.1rem;
   max-height: calc(1.1rem * 2);
 }
+
+.price-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-weight: bold;
+  margin: 10px 0;
+  color: var(--ee-btn-bg-hover);
+}
+
+.rating {
+  background-image: url("../../../public/image-sprite.png");
+  background-repeat: no-repeat;
+  background-size: 512px 512px;
+  height: 19px;
+  width: 80px;
+}
+
+.star-mini-1-5 {
+  background-position: -50px -439px;
+}
+.star-mini-2-5 {
+  background-position: -33px -439px;
+}
+.star-mini-3-5 {
+  background-position: -18px -439px;
+}
+.star-mini-4-5 {
+  background-position: -2px -439px;
+}
+.star-mini-5 {
+  background-position: -194px -485px;
+}
+.star-mini-4 {
+  background-position: -210px -486px;
+}
+.star-mini-3 {
+  background-position: -226px -486px;
+}
+.star-mini-2 {
+  background-position: -242px -486px;
+}
+.star-mini-1 {
+  background-position: -258px -486px;
+}
+.star-mini- {
+  background-position: -274px -486px;
+}

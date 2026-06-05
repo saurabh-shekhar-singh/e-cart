@@ -39,5 +39,6 @@
     "addedToCart": "Added to Cart",
     "remove": "Remove",
     "proceedToCheckout": "Proceed to Checkout →"
-  }
+  },
+  "productUrl": "https://equalexperts.github.io/frontend-take-home-test-data/products.json"
 }

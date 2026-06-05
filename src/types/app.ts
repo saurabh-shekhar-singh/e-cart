@@ -15,3 +15,9 @@ export type Products = {
 export type Cart = Products & {
   quantity: number;
 };
+
+export type ProductState<T> = {
+  data: T | null;
+  loading: boolean;
+  error: Error | null;
+};

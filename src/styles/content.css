@@ -45,18 +45,13 @@ section {
   margin: 0 0 10px;
   font-size: 1.1rem;
   color: #333;
+  cursor: pointer;
 }
 
 .card p {
   font-size: 0.9rem;
   color: #666;
   flex-grow: 1;
-}
-
-.price {
-  font-weight: bold;
-  margin: 10px 0;
-  color: var(--ee-btn-bg-hover);
 }
 
 .btn {
@@ -73,3 +68,38 @@ section {
 .btn:hover {
   background: var(--ee-btn-bg-hover);
 }
+
+.product-filter {
+  width: 20%;
+  height: 300px;
+  float: left;
+  border-radius: 4px;
+  border: 1px solid #cfcbcb;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+/* 
+.filter-options {
+  opacity: 0;
+}
+
+.open {
+  opacity: 1;
+}
+
+.close {
+  opacity: 0;
+} */
+
+.filter-container {
+  padding: 6px;
+}
+
+.filter-container label {
+  margin-left: 8px;
+}
+
+/* Product Modal */
+
+

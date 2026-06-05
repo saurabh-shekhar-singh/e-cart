@@ -1,0 +1,14 @@
+/* Search component style */
+.search-container {
+  display: flex;
+  justify-content: center;
+  height: 35px;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  width: 65%;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 4px;
+}

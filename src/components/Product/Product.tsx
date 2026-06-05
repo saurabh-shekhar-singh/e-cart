@@ -2,16 +2,17 @@ import React, { useContext } from "react";
 import "./Product.css";
 import { AppContext } from "@/context/AppContext";
 import data from "@/assets/en.json";
-import useFetchProduct from "@/hooks/useApiService";
 import { Products } from "@/types/app";
+import { getStarRating } from "@/utils/product";
 
-const URL =
-  "https://equalexperts.github.io/frontend-take-home-test-data/products.json";
-
-function Product() {
+function Product({
+  products,
+  openProductModal,
+}: {
+  products: Products[];
+  openProductModal: (product: Products) => void;
+}) {
   const { setCart } = useContext(AppContext);
-  const state = useFetchProduct<Products[]>(URL);
-  const products = state.data || [];
 
   function addToCart(product: Products) {
     setCart((cart) => {
@@ -34,23 +35,23 @@ function Product() {
     });
   }
 
-  if (state.loading === true) {
-    return <div className="loading">Loading...</div>;
-  }
-  if (state.error) {
-    return <div className="loading">Error loading products.</div>;
-  }
-
   return (
-    <div className="product-grid">
+    <div className="product-grid" data-testid="product-list">
       {products &&
         products.map((product) => (
-          <div key={product.id} className="card">
+          <div key={product.id} className="card" data-testid="product">
             <img src={product.image} alt={product.title} />
             <div className="card-content">
               <div>
-                <h3>{product.title}</h3>
-                <div className="price">${product.price}</div>
+                <h3 onClick={() => openProductModal(product)}>
+                  {product.title}
+                </h3>
+                <div className="price-rating">
+                  <span className="price">${product.price}</span>
+                  <span
+                    className={`rating star-mini-${getStarRating(product.rating.rate)}`}
+                  ></span>
+                </div>
               </div>
               <p>{product.description}</p>
 

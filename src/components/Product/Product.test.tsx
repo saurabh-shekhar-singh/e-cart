@@ -9,36 +9,42 @@ jest.mock("@/hooks/useApiService", () => ({
   default: jest.fn(),
 }));
 
-import useFetchProduct from "@/hooks/useApiService";
+// import useFetchProduct from "@/hooks/useApiService";
 import { Products } from "@/types/app";
 
 describe("Product component", () => {
-  const product = {
-    id: 1,
-    title: "Test Product",
-    price: 9.99,
-    description: "A test product",
-    image: "test.png",
-  } as Products;
+  const products = [
+    {
+      id: 1,
+      title: "Test Product",
+      price: 9.99,
+      description: "A test product",
+      image: "test.png",
+      rating: {
+        rate: 3.4,
+      },
+    },
+  ] as Products[];
 
-  beforeEach(() => {
-    (useFetchProduct as jest.Mock).mockReturnValue({
-      data: [product],
-      loading: false,
-      error: null,
-    });
-  });
+  // beforeEach(() => {
+  //   (useFetchProduct as jest.Mock).mockReturnValue({
+  //     data: [product],
+  //     loading: false,
+  //     error: null,
+  //   });
+  // });
 
-  afterEach(() => {
-    jest.resetAllMocks();
-  });
+  // afterEach(() => {
+  //   jest.resetAllMocks();
+  // });
 
   it("renders products and calls setCart when adding to cart", () => {
     const setCart = jest.fn();
+    const setShowModal = jest.fn();
 
     render(
       <AppContext.Provider value={{ setCart } as any}>
-        <Product />
+        <Product setShowModal={setShowModal} products={products} />
       </AppContext.Provider>,
     );
 
